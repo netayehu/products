@@ -1,0 +1,15 @@
+<h1>Product Details</h1>
+
+<h3>name: <input type="text" value="{{product.name}}" [readonly]="readOnly"></h3>
+<h3>price: <input type="text" value="{{product.price}}" [readonly]="readOnly"></h3>
+<h3>stock: <input type="text" value="{{product.stock}}" [readonly]="readOnly"></h3>
+
+<img src="assets/imges/sopha.jpg" alt="product...">
+<!-- {{product.id}} -->
+
+<br>
+<button (click)="delete()">Delete product</button>
+<br>
+<input type="checkbox" [(ngModel)]="readOnly">disable update
+<br>
+<button (click)="update()" [disabled]="readOnly">update product</button>

@@ -1,0 +1,27 @@
+<h3 *ngIf="discount>0" [ngStyle]="headStyle">only now at {{today | date:'dd/MM/yyyy'}} a discount of {{discount}}% on all products</h3>
+<img [style.width.px]="imageWidth" src="assets/pic.png" alt="home decor">
+<div>
+    <button (click)="increaseWidth()">+</button>
+    <button (click)="decreaseWidth()">-</button>
+    <button (click)="resetWidth()">reset</button>
+
+    <br>
+    <input type="range" min="0" max="900" value="500" step="10" [(ngModel)]="imageWidth">
+    <br>
+    image Width {{imageWidth}} pxl
+</div>
+
+
+    <div>
+        <input type="checkbox" [(ngModel)]="applyColors">apply colors
+        <h5>Our products</h5>
+        <ul>
+            <li [ngClass]="{reds: applyColors}">Decore</li>
+            <li [ngClass]="{greens: applyColors}">Furnitures</li>
+            <li *ngIf="isWinter" [ngClass]="{greens: applyColors}">Plants</li>
+            <li *ngFor="let item of items">{{item}}</li>
+        </ul>
+
+
+    </div>
+

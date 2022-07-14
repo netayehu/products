@@ -1,0 +1,35 @@
+<h3>Add Product</h3>
+
+<form action="" #formInfo="ngForm">
+    <input type="text" placeholder="name" [(ngModel)]="product.name" name="name" required pattern="^[A-Z].*$"
+        #nameInfo="ngModel">
+    <span *ngIf="nameInfo.errors?.['required']&&nameInfo.touched">name is missing</span>
+    <span *ngIf="nameInfo.errors?.['pattern']&&nameInfo.touched">name must start with a capital letter</span>
+
+    <input type="number" placeholder="price" [(ngModel)]="product.price" name="price" required min="1" max="10000"
+        #priceInfo="ngModel">
+    <span *ngIf="priceInfo.errors?.['max']&&priceInfo.dirty">price too hight</span>
+    <span *ngIf="priceInfo.errors?.['min']&&priceInfo.dirty">price too low. min is:
+        {{priceInfo.errors?.['min'].min}}</span>
+    <span *ngIf="priceInfo.errors?.['required']&&priceInfo.dirty">price is missing</span>
+
+    <input type="number" placeholder="stock" [(ngModel)]="product.stock" name="stock " required min="0"
+        #stockInfo="ngModel">
+        <span *ngIf="stockInfo.errors?.['max']&&stockInfo.dirty">stock too hight</span>
+        <span *ngIf="stockInfo.errors?.['min']&&stockInfo.dirty">stock too low. min is:
+            {{stockInfo.errors?.['min'].min}}</span>
+        <span *ngIf="stockInfo.errors?.['required']&&stockInfo.dirty">stock is missing</span>
+    <!-- <span *ngIf="stockInfo.invalid&&stockInfo.touched">stock is missing</span> -->
+
+    <button (click)="addProduct()" [disabled]="formInfo.invalid">Add</button>
+
+
+</form>
+
+<hr>
+<!-- <button (click)="disp(priceInfo)">display</button> -->
+<!-- <p> is name valid? {{nameInfo.valid}}</p>
+<p> is price valid? {{priceInfo.valid}}</p>
+<p>is stock valid? {{stockInfo.valid}}</p> 
+<hr>
+<p>is form valid? {{formInfo.valid}}</p> -->

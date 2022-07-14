@@ -1,0 +1,35 @@
+<!-- <button (click)="activateService()">activate service</button> -->
+<h3>Products</h3>
+<div>
+
+    <ng-template #loading> 
+        <img src="assets/imges/Ajux_loader.gif" alt="">
+        <br>
+        wait while we are fetching yuor products
+    </ng-template>
+
+    <table *ngIf="products; else loading">
+        <caption>Our Products</caption>
+        <tr>
+            
+            <th>name</th>
+            <th>price</th>
+            <th>stock</th>
+            <th>image</th>
+            
+        </tr>
+        <tr *ngFor="let p of products" routerLink="/welcome/product-details/{{p.id}}">
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.stock}}</td>
+            <img src="assets/imges/sopha.jpg" alt="">
+            
+
+            <!-- if list of items with name of numbers whrite {{p.id}} before .jpg -->
+            <!-- <td><app-thumbnail imgSrc="assets/imges/{{p.id}}.jpg"></app-thumbnail></td> -->
+            
+            
+            
+        </tr>
+    </table>
+</div>

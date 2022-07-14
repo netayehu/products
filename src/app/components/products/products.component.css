@@ -1,0 +1,33 @@
+:host{
+    display: block;
+    padding: 20px;
+    height: 80%;
+    overflow: auto;
+   
+
+    
+}
+
+table, tr, th, td{
+    border: 1px solid black;
+    width: 80%;
+    height: 80%;
+    font-size: larger;
+   
+
+}
+
+div{
+    height: 100%;
+    width: 100%;
+
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    
+}
+caption{
+    font-size: larger;
+}

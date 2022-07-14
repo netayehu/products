@@ -1,0 +1,23 @@
+div{
+    border: 1px solid black;
+    position: absolute;
+    bottom: 120px;
+    right: 20px;
+    padding: 10px;
+}
+
+div:nth-of-type(2){
+    bottom: 250px;
+}
+ul{
+    overflow: auto;
+    height: 100px; 
+    text-align: center; 
+}
+
+.reds{
+    color: rgb(180, 58, 58);
+}
+.greens{
+    color: rgb(78, 161, 78);
+}

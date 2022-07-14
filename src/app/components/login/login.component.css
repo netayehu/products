@@ -1,0 +1,17 @@
+:host{
+    display: block;
+    border: 1px solid black;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: palegoldenrod;
+}
+input{
+    color: rgb(161, 121, 61);
+
+}
+button{
+
+
+}

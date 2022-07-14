@@ -1,0 +1,15 @@
+
+input,button{
+    display: block;
+    margin: 10px;
+    font-size: large;
+    width: 300px;
+    
+}
+form{
+    width: fit-content;
+    margin: auto;
+}
+span{
+    color: red;
+}

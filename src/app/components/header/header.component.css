@@ -1,0 +1,9 @@
+h1{
+    color: rgb(41, 41, 75);
+    font-size: 40px;
+    margin: 0%;
+    position: relative;
+    top: 50px;
+    transform: translateY(-50%);
+    
+}
